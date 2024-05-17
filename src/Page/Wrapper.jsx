@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { GenerateBox } from '../components/GenerateBox'
 import { PasswordLength } from '../components/PasswordLength';
-import { PasswordBox } from '../components/passwordBox';
+import { PasswordBox } from '../components/PasswordBox';
 
 export const Wrapper = () => {
     const [ password, setPassword] = useState('');
