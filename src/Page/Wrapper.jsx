@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import { PasswordBox } from '../components/passwordBox'
 import { GenerateBox } from '../components/GenerateBox'
 import { PasswordLength } from '../components/PasswordLength';
+import { PasswordBox } from '../components/passwordBox';
 
 export const Wrapper = () => {
     const [ password, setPassword] = useState('');
     const [ passwordLength, setPasswordLength ] = useState(12)
-    const [ shipping, setShipping ] = useState(false)
     const [ selectedItems, setSelectedItems ] = useState([])
     const [ successMessage, setSuccessMessage ] = useState('')
 
@@ -51,7 +50,7 @@ export const Wrapper = () => {
 
   return (
     <div className='w-[90%] md:w-[40%] text-white p-3 flex flex-col gap-3'>
-        <PasswordBox password={password} successMessage={successMessage} setSuccessMessage={setSuccessMessage}/>
+        <PasswordBox password={password} setSuccessMessage={setSuccessMessage}/>
         <div className='bg-stone-400 p-3'>
             <PasswordLength passwordLength={passwordLength} setPasswordLength={setPasswordLength}/>
             <GenerateBox password={password} generatePassword={generatePassword} handleShipping={handleShipping} selectedItems={selectedItems} />

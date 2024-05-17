@@ -2,7 +2,7 @@ import { faCopy } from '@fortawesome/free-regular-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 
-export const PasswordBox = ({ password, successMessage, setSuccessMessage }) => {
+export const PasswordBox = ({ password, setSuccessMessage }) => {
 
     const copyToClipBoard = () => {
         const el = document.createElement('textarea');
